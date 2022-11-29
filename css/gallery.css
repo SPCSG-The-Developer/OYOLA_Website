@@ -1,0 +1,162 @@
+#gallery>h1 {
+    margin: 1rem 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #364f6b;
+    letter-spacing: 0.12rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#gallery > #underline{
+    height: 0.1rem;
+    width: 7vw;
+    margin: 1rem auto;
+    background-color: #283060;
+}
+#gallery>.photos-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    row-gap: 1rem;
+}
+#gallery>.photos-container>a {
+    text-decoration: none;
+}
+
+#gallery>.photos-container>a>.category {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 30vw;
+    height: 20vw;
+    transition: all 0.5s;
+}
+
+#gallery>.photos-container>a>.category>img {
+    display: block;
+    width: 100%;
+    border-radius: 0.3rem;
+    transition: all 1s;
+}
+
+#gallery>.photos-container>a>.category>h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top-right-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 390;
+    color: #050505;
+}
+
+#gallery>.photos-container>a>.category>button{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    padding: 0.5rem 1.3rem;
+    border-radius: 7px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgba(77, 94, 199, 1);
+    background-color: rgba(77, 94, 199, 0.84);
+}
+
+#gallery>.photos-container>a>.category>img:hover{
+    opacity: 0.8;
+    transform-origin: 50% 50%;
+    transform: scale(1.2);
+}
+#gallery>.photos-container>a>.category1>img{
+    display: block;
+    width: 100%;
+    border-radius: 0.3rem;
+    transition: all 1s;
+    transform: scale(1.5);
+}
+#gallery>.photos-container>a>.category1>img:hover{
+    transform: scale(1.7);
+}
+
+/* making responsive */
+
+/* small laptops */
+
+@media screen and (max-width:1024px){
+    #gallery>h1 {
+        font-size: 2.6rem;    
+    }
+    #gallery>.photos-container>a>.category>h3 {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    #gallery>.photos-container>a>.category>button{ position: absolute;
+        bottom: 3%;
+        right: 2%;
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* tablets */
+
+@media screen and (max-width:768px){
+    #gallery>h1 {
+        font-size: 2.5rem;
+    }
+    #gallery > #underline{
+        margin-bottom: 2rem;
+    }
+    #gallery>.photos-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #gallery>.photos-container>a>.category {
+        width: 45vw;
+        height: 30vw;
+    }
+    #gallery>.photos-container>a>.category>h3 {
+        padding: 0.4rem;
+        font-size: 1.4rem;
+    }
+}
+
+/* large phones */
+
+@media screen and (max-width:426px){
+    #gallery>h1 {
+        font-size: 2.1rem;
+    }
+    #gallery > #underline{
+        width: 15vw;
+    }
+    #gallery>.photos-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #gallery>.photos-container>a>.category {
+        width: 80vw;
+        height: 50vw;
+    }
+}
+
+/* small phones */
+
+@media screen and (max-width:320px){
+    #gallery>h1 {
+        font-size: 1.9rem;
+    }
+    #gallery>.photos-container>a>.category>h3 {
+        padding: 0.3rem;
+        font-size: 1.2rem;
+    }
+    #gallery>.photos-container>a>.category {
+        width: 90vw;
+        height: 60vw;
+    }
+}

@@ -1,0 +1,166 @@
+.footer-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 36vh;
+    width: 100%;
+    padding-top: 1rem;
+    background-color: #101917;
+    justify-items: center;
+}
+
+#footer>.footer-container>#first {
+    background-color: transparent;
+}
+
+#footer>.footer-container>#first>h2 {
+    background-color: transparent;
+    margin: 1rem 0.8rem;
+    color: white;
+}
+
+#footer>.footer-container>#first>.icons-container {
+    display: flex;
+    background-color: transparent;
+}
+
+#footer>.footer-container>#first>.icons-container>div {
+    width: 5vh;
+    height: 5vh;
+    margin: 0.5rem;
+    background-color: transparent;
+}
+
+#footer>.footer-container>#first>.icons-container>div>a {
+    background-color: transparent;
+}
+
+#footer>.footer-container>#first>.icons-container>div>a>img {
+    width: 100%;
+    background-color: transparent;
+}
+
+#footer>.footer-container>#middle {
+    background-color: transparent;
+    margin: 0.8rem;
+}
+
+#footer>.footer-container>#middle>div {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+#footer>.footer-container>#middle>div>a {
+    background-color: transparent;
+}
+
+#footer>.footer-container>#middle>div>a>img {
+    width: 4vh;
+    height: 4vh;
+    margin: 0.8rem;
+    background-color: transparent;
+    filter: invert(100%);
+    float: left;
+}
+
+#footer>.footer-container>#middle>div>h3 {
+    background-color: transparent;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+}
+
+#footer>.footer-container>#branches {
+    background-color: transparent;
+    margin: 1rem;
+}
+
+#footer>.footer-container>#branches>h2 {
+    background-color: transparent;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+}
+#footer>.footer-container>#branches>li {
+    background-color: transparent;
+    padding: 0.2rem 0rem;
+    color: white;
+    letter-spacing: 0.04rem;
+}
+#footer>.footer-container>#last {
+    background-color: transparent;
+    margin: 1rem;
+}
+
+#footer>.footer-container>#last>h3 {
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    color: white;
+    background-color: transparent;
+    margin: 0.5rem;
+}
+
+/* making responsive */
+
+/* tablets */
+
+@media screen and (max-width:768px) {
+    .footer-container {
+        height: 30vh;
+        padding: 0rem;
+    }
+    #footer>.footer-container>#first>h2 {
+        font-size: 1.3rem;
+    }
+    #footer>.footer-container>#middle>div>a>img {
+        width: 3.7vh;
+        height: 3.7vh;
+    }
+    #footer>.footer-container>#middle>div>h3 {
+        font-size: 1rem;
+    }
+    #footer>.footer-container>#last>h3 {
+        font-size: 1rem;
+        line-height: 1.58rem;
+    }
+}
+
+/* small laptops */
+
+@media screen and (max-width:1024px) {
+    .footer-container {
+        height: 45vh;
+    }
+}
+
+
+/* large phones */
+
+@media screen and (max-width:426px) {
+    .footer-container {
+        height: 120vh;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+    #footer>.footer-container>#first>h2 {
+        text-align: center;
+    }
+    #footer>.footer-container>#last{
+        margin-top: 5rem;
+    }
+    #footer>.footer-container>#last>h3 {
+        text-align: center;
+    }
+    #footer>.footer-container>#last>h3:nth-child(1)::before {
+        content: 'Address';
+        position: absolute;       
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: 18%;
+        height: 5vh;
+        width: 18vw;
+        padding-bottom: 0.1rem;
+        border-bottom: 1px solid white;
+    }
+}

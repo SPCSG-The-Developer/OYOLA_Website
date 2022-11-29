@@ -1,0 +1,227 @@
+.displayMsg{
+    display: none;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    bottom: 10%;
+    left: 50%;
+    height: xx;
+    width: xx;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #222222;
+    z-index: 15;
+}
+.displayMsg > h4{
+    line-height: 5vh;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.036rem;
+    text-align: center;
+    background-color: transparent;
+}
+
+.account-modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: 10;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.status-display-modal-content{
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 25%;
+    left: 50%;
+    width: 40vw;
+    height: 40vh;
+    border-radius: 5px;
+}
+.status-display-modal-content > .modal-title{
+    background-color: #283060;
+}
+.status-display-modal-content>h2 {
+    color: white;
+}
+#statusTitle{
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+    color: white;
+}
+.status-display-modal-content > p{
+    padding: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.037rem;
+    line-height: 1.58rem;
+}
+.account-modal-content {
+    display: block;
+    position: relative;
+    margin: 0rem auto;
+    margin-top: 7rem;
+    width: 568px;
+    height: 570px;
+    border-radius: 10px;
+}
+
+.account-modal-content>h2,
+.status-display-modal-content>h2 {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    height: 9vh;
+    width: 9vh;
+    text-align: center;
+    line-height: 9vh;
+    font-size: 2.5rem;
+    font-weight: 300;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.account-modal-content>.modal-title > h3,
+.status-display-modal-content>.modal-title > h3{
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    line-height: 10vh;
+    border-bottom: 1px solid #ebebeb;
+    color: #283060;    
+    background-color: #ccd2f33a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.038rem;
+    cursor: pointer;
+}
+.status-display-modal-content>.modal-title > h3{
+    cursor: default;
+    color: #181818;
+    border-bottom: 1px solid #fbfbfb;
+}
+.account-modal-content>div>form {
+    display: block;
+    height: 400px;
+    padding: 1rem 3rem;
+}
+
+.account-modal-content>div>form>input {
+    display: block;
+    height: 56px;
+    width: 100%;
+    border: 1px solid #222222;
+    margin: 1.1rem auto;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    color: black;
+}
+
+.account-modal-content>div>form>input::placeholder {
+    font-size: 1rem;
+}
+
+.account-modal-content>div>form>input[type="submit"] {
+    background-color: rgba(77, 94, 199, 0.84);
+    border: 1px solid rgba(77, 94, 199, 1);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.account-modal-content>div>form>h5 {
+    text-align: center;
+    color: #222222;
+    font-weight: 400;
+}
+
+.account-modal-content>.log-in-content>form>h5 {
+    text-align: start;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.account-modal-content>.log-in-content>form>#fogotPasswordText {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.account-modal-content>div>form>h5>a, .account-modal-content>div>form>h5>span {
+    color: #181818;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.account-modal-content>div>form>#bottom-text1 {
+    font-size: 1rem;
+}
+
+#accountDetailsBox{
+    height: 10vh;
+}
+.account-details-form > label,
+.account-details-form > input{
+    color: #222222;
+}
+.account-details-form > button{
+    position: absolute;
+    right: 3.5vw;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid  rgba(77, 94, 199, 1);
+    background-color: rgba(77, 94, 199, 0.84);
+}
+.account-details-form > .saveBtn{
+    margin-top: -1.1rem;
+    display: none;
+}
+.account-details-form > h3{
+    color: #a20a0a;
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 0.04rem;
+    margin: 0rem;
+}
+/* small laptops */
+
+@media screen and (max-width:1024px){
+    .status-display-modal-content{
+        width: 50vw;
+        height: 40vh;
+    }
+}
+
+/* large phones */
+
+@media screen and (max-width:426px) {
+    .account-modal-content {
+        width: 99vw;
+        height: 100vh;
+        border-radius: 0px;
+        margin-top: 13vh;
+    }
+    .account-modal-content>div>form {
+        padding: 1rem 1rem;
+    }
+    .status-display-modal-content{
+        width: 80vw;
+        height: 40vh;
+    }
+    .displayMsg{
+        bottom: 0%;
+        width: 85vw;
+    }
+}

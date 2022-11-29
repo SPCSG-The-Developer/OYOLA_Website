@@ -1,0 +1,183 @@
+:root{
+    --linkColor : #100C08;
+    --hamburgerMenuColor: #100C08;
+    --logoColor: #283060;
+}
+
+/* -----navigation bar----- */
+
+/* styling header part */
+
+.header{
+    background-color: #fcfcfc;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    transition: top 0.3s;
+}
+.header > a.logo{
+  display: block;
+  text-decoration: none;
+  color: var(--logoColor);
+  font-size: 2rem;
+  padding: 2.5vh 4vh;
+  font-weight: 500;
+  float: left;  
+}
+.header > .menu{
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header > .menu > li > a{
+    display: block;
+    text-decoration: none;
+    color: var(--linkColor);
+    padding: 0.8rem 2rem;
+    transition: all .5s ease-in;
+    cursor: pointer;
+}
+.header  > .menu > li > a:hover{
+    color: var(--logoColor);
+}
+
+.header  > .menu > .account-menu > .sub-menu{
+    display: none;
+    position: absolute;
+    height: xx;
+    text-align: start;
+    background-color: rgba(0,0,0,.9);
+}
+.header  > .menu > .account-menu > .sub-menu > ul{
+    list-style: none;
+    background-color: transparent;
+}
+.header  > .menu > .account-menu > .sub-menu > ul > li  {
+    margin: 0rem 1rem;
+    background-color: transparent;
+}
+.header  > .menu > .account-menu > .sub-menu > ul > li > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.6rem 2rem;
+    transition: all .5s ease-in;
+    cursor: pointer;
+    background-color: transparent;
+}
+.header  > .menu > .account-menu > .sub-menu > ul > li > a:hover{
+    color: white;
+}
+.header  > .menu > .account-menu:hover .sub-menu{
+    display: block;
+}
+/* menu */
+
+.header > .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .3s ease-out;
+}
+
+/* hiding checkbox */
+
+.header .menu-btn{
+    display: none;
+}
+
+/* hamburger menu */
+
+.header > .menu-icon{
+    cursor: pointer;
+    float: right;
+    user-select: none;
+    padding: 2.23rem 2.5rem;    
+}
+
+.header > .menu-icon > .navicon{
+    position: relative;
+    display: block;
+    height: .15rem;
+    width: 1.7rem;
+    background: var(--hamburgerMenuColor);
+    transition: all .2s ease-out;
+}
+.header > .menu-icon > .navicon::before,
+.header > .menu-icon > .navicon::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--hamburgerMenuColor);
+    transition: all .3s ease-out;
+}
+.header > .menu-icon > .navicon::before{
+    top: -7px;
+}
+.header > .menu-icon > .navicon::after{
+    top: 7px;
+}
+
+/* after clicking hamburger menu */
+
+.header > .menu-btn:checked ~ .menu{
+    max-height: 70vh;
+}
+.header > .menu-btn:checked ~ .menu-icon > .navicon{
+    background: transparent;
+}
+.header > .menu-btn:checked ~ .menu-icon > .navicon::before{
+    transform: rotate(45deg);
+}
+.header > .menu-btn:checked ~ .menu-icon > .navicon::after{
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media only screen and (min-width:812px){
+  .header > .menu > li{
+      float: left;
+  }
+  .header > .menu > li > a{
+      padding: 3.5vh 2.3vw;
+  }
+  .header > .menu{
+      clear: none;
+      float: right;
+      max-height: none;
+  }
+  .header .menu-icon{
+      display: none;
+  }
+  .header > .menu > li > a::after,
+  .header  > .menu > .account-menu > .sub-menu > ul > li > a::after{
+    content: '';
+    display: block;
+    border-bottom: 1px solid var(--logoColor);
+    transform: scaleX(0) ;
+    transform-origin:0% 100%;
+    transition: all .3s ease-in;
+  }
+  .header  > .menu > .account-menu > .sub-menu > ul > li > a::after{
+    border-bottom: 1px solid white;
+  }
+  .header > .menu > li > a:hover::after,
+  .header  > .menu > .account-menu > .sub-menu > ul > li > a:hover::after{
+    transform: scaleX(1);
+  }
+}
+
+@media only screen and (min-width:1600px){
+    .header > a.logo{
+        font-size: 2.8rem   ;
+    } 
+    .header > .menu > li{
+        font-size: 1.5rem;
+    }
+}

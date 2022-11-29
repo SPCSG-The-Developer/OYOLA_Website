@@ -1,0 +1,179 @@
+#about{
+    background-color: #fffafe;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+#about > h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: #112d4e;
+    text-align: center;
+    background-color: transparent;
+}
+#about > #underline{
+    height: 0.1rem;
+    width: 4vw;
+    margin: 0.4rem auto;
+    background-color: #283060;
+}
+#about > .profiles-container{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    padding: 3rem;
+    background-color: transparent;
+} 
+#about>.profiles-container>.profile-card {
+    width: 25vw;
+    display: grid;
+    justify-items: center;
+    align-content: flex-start;
+    border-radius: 1rem;
+    padding: 1rem 0rem 4rem 0rem;
+}
+
+#about>.profiles-container>.pc1{
+    background-color: #f8f3d4;
+}
+#about>.profiles-container>.pc2{
+    background-color: #defcf9;
+}
+#about>.profiles-container>.pc3{
+    background-color: #e0f9b5;
+}
+
+
+#about>.profiles-container>.profile-card>.image {
+    width: 20vh;
+    height: 20vh;
+    margin: 1rem;
+    background-color: transparent;
+}
+
+#about>.profiles-container>.profile-card>.image>img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#about>.profiles-container>.profile-card>.title {
+    background-color: transparent;
+}
+
+#about>.profiles-container>.profile-card>.title>h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    line-height: 1.8rem;
+    color: #112d4e;
+    margin: 0.3rem auto;
+    background-color: transparent;
+    text-align: center;
+}
+#about>.profiles-container>.profile-card>.title>h2>span {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: #112d4e;
+    background-color: transparent;
+}
+
+#about>.profiles-container>.profile-card>.description {
+    background-color: transparent;
+}
+
+#about>.profiles-container>.profile-card>.description>p {
+    text-align: start;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.04rem;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+#about > .profiles-container>.profile-card>.title >.line{
+    height: 0.1rem;
+    width: 4vw;
+    background-color: #283060;
+    margin: 1rem auto;
+}
+
+
+/* making responsive */
+
+@media screen and (max-width:1024px){
+    #about > h1{
+        font-size: 2.6rem;
+    }   
+    #about > .profiles-container{
+        padding: 1rem;
+    }
+    #about>.profiles-container>.profile-card {
+        width: 28vw;
+        padding: 1rem;
+    }
+    #about>.profiles-container>.profile-card>.title>h2 {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    #about > .profiles-container>.profile-card >.line{
+        margin: -0.5rem;
+    }
+    #about>.profiles-container>.profile-card>.description>p {
+        font-size: 1.1rem;
+    }
+}
+
+/* tablets */
+
+@media screen and (max-width:768px){
+    #about{
+        margin-top: 2rem;
+    }
+    #about > h1{
+        font-size: 2.5rem;
+    } 
+    #about > .profiles-container{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 1.4rem;
+    }
+    #about>.profiles-container>.profile-card {
+        width: 40vw;
+        padding: 1rem;
+    }
+}
+/* large phones */
+
+@media screen and (max-width:426px){
+    #about > h1{
+        font-size: 2.1rem;
+    }
+    #about > #underline{
+        width: 13vw;
+    } 
+    #about > .profiles-container{
+        margin: 0rem;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 1.5rem;
+    }
+    #about>.profiles-container>.profile-card {
+        width: 85vw;
+        padding: 0.3rem;
+    }
+    #about > .profiles-container>.profile-card >.line{
+        width: 10vw;
+    }
+}
+
+/* small phones */
+
+@media screen and (max-width:321px){
+    #about{
+        padding: 0rem;
+    }
+}

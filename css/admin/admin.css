@@ -1,0 +1,360 @@
+#navigationSection {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    background-color: #283060;
+}
+
+#navigationSection>#heading {
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    border-bottom: 1.5px solid #f1f1f1;
+    border-right: 1.5px solid #f1f1f1;
+}
+
+#navigationSection>#heading>h1 {
+    color: #f1f1f1;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    background-color: transparent;
+}
+
+#navigationSection>.sectionLinks, .subMenu {
+    width: 100%;
+    background-color: transparent;
+}
+
+#navigationSection>.sectionLinks>a, .subMenu>a {
+    text-decoration: none;
+    padding: 0.7rem 3rem;
+    display: block;
+    color: #fefefe;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.subMenu>a::before {
+    content: '•';
+    margin: 0rem 1rem;
+}
+
+#navigationSection>.sectionLinks>a:hover, .subMenu>a:hover {
+    color: #e6c762;
+}
+
+/* Blocks */
+
+#block1 {
+    width: 80%;
+    height: 100%;
+    float: right;
+    position: relative;
+    background-color: #fafafa;
+    background-color: transparent;
+}
+
+.bookings {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.bookings .heading {
+    background-color: #283060;
+    border-bottom: 1.5px solid #f1f1f1;
+    border-right: 1.5px solid #f1f1f1;
+}
+
+.bookings .heading>h1 {
+    color: white;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    background-color: transparent;
+}
+
+.bookings li {
+    display: block;
+    color: #283060;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+}
+
+.statusBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0rem;
+    margin: 0;
+}
+
+select {
+    height: 33px;
+    width: 9.3vw;
+    font-size: 1rem;
+    background-color: #141414e8;
+    border: 2px solid #1d1d1d;
+    color: #ffffff;
+    padding: 0.3rem 1rem;
+    outline: white;
+    border-radius: 5px;
+}
+
+option {
+    background-color: transparent;
+    margin: 1rem;
+    color: #f2f2f2;
+}
+
+button {
+    height: 33px;
+    width: 9.3vw;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.03rem;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    color: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: #233288;
+}
+
+.bookings .box {
+    border-right: 1.5px solid #283060;
+    border-left: 1.5px solid #283060;
+}
+
+/* customer data modal */
+
+#hiddenBoxTrip1, #hiddenBoxTrip2, #hiddenBoxTrip3, #hiddenBoxTrip4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d1d1d5d;
+}
+
+.customerDataClass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 90%;
+    width: 60%;
+    justify-items: center;
+    padding: 2rem;
+    background-color: #1d1d1d;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 0rem 0.5rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 18vw;
+    font-size: 1rem;
+    border: 2px solid white;
+    outline: white;
+    margin: 0.7rem 0rem;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+}
+
+input, label, .left, .right {
+    background-color: transparent;
+    color: white;
+}
+
+/*stytling users block */
+
+#block2 {
+    width: 80%;
+    height: 100%;
+    float: right;
+    position: relative;
+    background-color: #fafafa;
+}
+
+#block2>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#block2>div>h1 {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    background-color: #3b4580;
+    padding: 1rem;
+    letter-spacing: 00.04rem;
+}
+
+#block2>div>.users-data-class {
+    display: grid;
+    grid-template-columns: 10% 45% 45%;
+}
+
+#block2>div>.users-data-class h2 {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+    background-color: #7788dd;
+    padding: 1rem;
+    letter-spacing: 00.04rem;
+    border: 2px solid #f8f8f8;
+    border-right: 1px solid #f8f8f8;
+    border-left: 1px solid #f8f8f8;
+}
+
+#block2>div>.users-data-class>div li {
+    display: block;
+    color: #283060;
+    font-size: 1.04rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    padding: 0.8rem 1rem;
+    background-color: transparent;
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+
+/* styling messages block */
+
+#block3 {
+    width: 80%;
+    height: 100%;
+    float: right;
+    position: relative;
+    background-color: #fafafa;
+}
+
+#block3>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#block3>div>h1 {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    background-color: #3b4580;
+    padding: 1rem;
+    letter-spacing: 00.04rem;
+}
+
+#block3>div>.message-data-class {
+    display: grid;
+    grid-template-columns: 25% 25% 17% 33%;
+}
+
+#block3>div>.message-data-class h2 {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+    background-color: #7788dd;
+    padding: 1rem;
+    letter-spacing: 00.04rem;
+    border: 2px solid #f8f8f8;
+    border-right: 1px solid #f8f8f8;
+    border-left: 1px solid #f8f8f8;
+}
+
+#block3>div>.message-data-class>div li {
+    display: block;
+    color: #283060;
+    font-size: 0.95rem;
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    background-color: transparent;
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+
+.read {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 15vw;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    border-radius: 5px;
+    color: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: #233288;
+}
+
+.messageModalBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: xx;
+    width: 50vw;
+    padding:1rem;
+    background-color: #1d1d1d;
+    overflow: auto;
+    border-radius: 10px;
+}
+.content,
+.content h2,
+.content p{
+    background-color: transparent;
+    color: white;
+}
+.content p{
+    margin: 2rem 0rem;
+}
+.messageClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 0rem 0.5rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.96);
+}

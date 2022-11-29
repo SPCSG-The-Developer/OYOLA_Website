@@ -1,0 +1,73 @@
+#block6 {
+    width: 80%;
+    height: 100%;
+    float: right;
+    position: relative;
+    background-color: #fafafa;
+}
+
+#block6>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+#block6>div>h1 {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+    background-color: #3b4580;
+    padding: 1rem;
+    letter-spacing: 00.04rem;
+}
+
+#block6>div>.account-data-class {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#block6>div>.account-data-class h2 {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+    background-color: #7788dd;
+    padding: 1rem;
+    letter-spacing: 00.04rem;
+    border: 6px solid #f8f8f8;
+    border-right: 1px solid #f8f8f8;
+    border-left: 1px solid #f8f8f8;
+}
+
+#block6>div>.account-data-class li {
+    display: block;
+    color: #683060;
+    font-size: 1.04rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    padding: 0.8rem 1rem;
+    background-color: transparent;
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+
+.account_section button{
+    padding: 0.5rem;
+    margin: 1.5rem 0.1rem;
+    width: 15vw;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    border-radius: 5px;
+    color: #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: #233288;
+}

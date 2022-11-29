@@ -1,0 +1,132 @@
+#contact-container {
+    position: relative;
+    height: xx;
+    width: 100%;
+    padding: 5rem 0rem;
+    overflow: hidden;
+}
+
+#contact-container .bg-image {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#contact-container .bg-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2222221a;
+}
+
+#contact-container .bg-image>img {
+    width: 100vw;
+    display: block;
+}
+
+.contact {
+    display: block;
+    position: relative;
+    margin: 0rem auto;
+    padding: 1rem 0rem;
+    width: 568px;
+    height: 560px;
+    border-radius: 5px;
+}
+
+.contact>.contact-title>h3 {
+    height: 10vh;
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+    line-height: 10vh;
+    border-bottom: 1px solid #ebebeb;
+    color: #283060;
+    background-color: #ccd2f33a;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.038rem;
+}
+
+.contact>div>form {
+    display: block;
+    height: 360px;
+    padding: 1rem 3rem;
+}
+
+.contact>div>form>input, .contact>div>form>textarea {
+    display: block;
+    height: 56px;
+    width: 100%;
+    border: 1px solid #222222;
+    margin: 1.1rem auto;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+}
+
+.contact>div>form>input::placeholder, .contact>div>form>textarea::placeholder {
+    font-size: 1rem;
+}
+
+.contact>div>form>textarea {
+    height: 85px;
+    resize: vertical;
+}
+
+.contact>div>form>input[type="submit"] {
+    background-color: rgba(77, 94, 199, 0.84);
+    border: 1px solid rgba(77, 94, 199, 1);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+/* tablets */
+
+@media screen and (max-width:768px) {
+    #contact-container {
+        padding: 2rem 0rem;
+    }
+    .contact {
+        width: 538px;
+        height: 500px;
+    }
+    .contact>div>form {
+        display: block;
+        height: 320px;
+        padding: 1rem 3rem;
+    }
+    .contact>div>form>input, .contact>div>form>textarea {
+        height: 46px;
+    }
+    .contact>div>form>textarea {
+        height: 80px;
+    }
+}
+
+/* large phones */
+
+@media screen and (max-width:426px) {
+    #contact-container {
+        padding-top: 0px;
+    }
+    .contact {
+        width: 94vw;
+        height: 100vh;
+        border-radius: 0px;
+        margin-top: 0vh;
+    }
+    .contact>div>form {
+        padding: 1rem 1rem;
+    }
+    #contact-container .bg-image {
+        display: none;
+    }
+}

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYOLA</title>
+    <link rel="stylesheet" href="css/admin/admin.css">
+    <link rel="stylesheet" href="css/admin/admin-account.css">
+    <link rel="stylesheet" href="./css/admin/modal-in-admin.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link
+        href="
+        https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Varela&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --mainBackgroundColor: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+
+        *,
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--mainBackgroundColor);
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="admin-login-box" style="display: none;">
+        <form id="admin-log-in-form">
+            <label>ADMIN LOG IN</label>
+            <input type="email" name="admin-email" placeholder="Email" required>
+            <input type="password" name="admin-password" placeholder="Password" required>
+            <h5 style="text-align: center;" id="admin-log-in-error"></h5>
+            <input type="submit" value="Log in">
+        </form>
+    </div>
+
+    <div id="navigationSection" style="display: none;">
+        <div id="heading">
+            <h1>OYOLA ADMIN</h1>
+        </div>
+        <div class="sectionLinks">
+            <a href="#" id="section1">Bookings</a>
+            <div class="subMenu" id="section1subMenu" style="display: none;">
+                <a href="#" id="submenu1">Pending</a>
+                <a href="#" id="submenu2">Confirmed</a>
+                <a href="#" id="submenu3">Cancelled</a>
+                <a href="#" id="submenu4">Completed</a>
+            </div>
+            <a href="#" id="section2">Users</a>
+            <a href="#" id="section3">Messages</a>
+            <a href="#" id="section6">Account</a>
+        </div>
+    </div>
+
+    <div id="block">
+        <div class="bookings_section" id="block1">
+            <div class="pending bookings" id="block11" style="display: none;">
+                <div>
+                    <div class="heading">
+                        <h1>1 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip1DataPending">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>2 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip2DataPending">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>3 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip3DataPending">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>4 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip4DataPending">
+
+                    </div>
+                </div>
+            </div>
+            <div class="confirmed bookings" id="block12" style="display: none;">
+                <div>
+                    <div class="heading">
+                        <h1>1 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip1DataConfirmed">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>2 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip2DataConfirmed">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>3 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip3DataConfirmed">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>4 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip4DataConfirmed">
+
+                    </div>
+                </div>
+            </div>
+            <div class="cancelled bookings" id="block13" style="display: none;">
+                <div>
+                    <div class="heading">
+                        <h1>1 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip1DataCancelled">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>2 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip2DataCancelled">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>3 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip3DataCancelled">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>4 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip4DataCancelled">
+
+                    </div>
+                </div>
+            </div>
+            <div class="completed bookings" id="block14" style="display: none;">
+                <div>
+                    <div class="heading">
+                        <h1>1 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip1DataCompleted">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>2 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip2DataCompleted">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>3 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip3DataCompleted">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="heading">
+                        <h1>4 Day Trip Bookings</h1>
+                    </div>
+                    <div class="box" id="trip4DataCompleted">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="users_section" style="display: none;" id="block2">
+            <div>
+                <h1>Users in our community</h1>
+                <div class="users-data-class">
+                    <div>
+                        <h2>S.No</h2>
+                        <div id="snoData">
+
+                        </div>
+                    </div>
+                    <div>
+                        <h2>User Name</h2>
+                        <div id="user-name-ID-Data">
+
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Email ID</h2>
+                        <div id="email-ID-Data">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="messages_section" style="display: none;" id="block3">
+            <div>
+                <h1>Messages</h1>
+                <div class="message-data-class">
+                    <div>
+                        <h2>Name</h2>
+                        <div id="name-ID-Data-Message">
+
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Email ID</h2>
+                        <div id="email-ID-Data-Message">
+
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Phone number</h2>
+                        <div id="phoneNumber-ID-Data-Message">
+
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Message</h2>
+                        <div id="readButtonsBox">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="account_section" style="display: none;" id="block6">
+            <div>
+                <h1>Account Info</h1>
+                <div class="account-data-class">
+                    <div>
+                        <h2>User Name</h2>
+                        <li id="account-user-name-ID-Data">
+
+                        </li>
+                    </div>
+                    <div>
+                        <h2>Email ID</h2>
+                        <li id="account-email-ID-Data">
+
+                        </li>
+                    </div>
+                </div>
+                <button id="admin-log-out">Log out</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- trip1 user data modal box -->
+
+    <div id="hiddenBoxTrip1" style="display: none;">
+        <div class="customerDataClass">
+            <h2 id="close" class="close">&times;</h2>
+            <div class="left">
+                <label>Name</label>
+                <input type=" text" disabled id="name">
+                <label>Email</label>
+                <input type="email" disabled id="email">
+                <label>Phone number</label>
+                <input type="tel" disabled id="phoneNumber">
+                <label>Check-in date</label>
+                <input type="date" disabled id="check-in">
+                <label>Check-out date</label>
+                <input type="date" disabled id="check-out">
+                <label>cab type</label>
+                <input type="text" id="cab-type">
+            </div>
+            <div class="right">
+                <label>Adults</label>
+                <input type="text" disabled id="adult-count">
+                <label>Children</label>
+                <input type="text" disabled id="children-count">
+                <label>Infants</label>
+                <input type="text" disabled id="infants-count">
+                <label>Breakfast</label>
+                <input type="text" disabled id="breakfast">
+                <label>Lunch</label>
+                <input type="text" disabled id="lunch">
+            </div>
+        </div>
+    </div>
+
+    <!-- trip2 user data modal box -->
+
+    <div id="hiddenBoxTrip2" style="display: none;">
+        <div class="customerDataClass">
+            <h2 id="trip2Close" class="close">&times;</h2>
+            <div class="left">
+                <label>Name</label>
+                <input type=" text" disabled id="trip2-name">
+                <label>Email</label>
+                <input type="email" disabled id="trip2-email">
+                <label>Phone number</label>
+                <input type="tel" disabled id="trip2-phoneNumber">
+                <label>Check-in date</label>
+                <input type="date" disabled id="trip2-check-in">
+                <label>Check-out date</label>
+                <input type="date" disabled id="trip2-check-out">
+                <label>Adults</label>
+                <input type="text" disabled id="trip2-adult-count">
+                <label>Children</label>
+                <input type="text" disabled id="trip2-children-count">
+                <label>Infants</label>
+                <input type="text" disabled id="trip2-infants-count">
+                <label>Rooms</label>
+                <input type="text" disabled id="trip2-rooms-count">
+                <label>Rooms type</label>
+                <input type="text" disabled id="trip2-rooms-type">
+            </div>
+            <div class="right">
+                <label>cab type</label>
+                <input type="text" id="trip2-cab-type">
+                <label>Firecamp</label>
+                <input type="text" disabled id="trip2-firecamp">
+                <label>Dhimsa dance</label>
+                <input type="text" disabled id="trip2-dhimsa-dance">
+                <label>Tent for rent</label>
+                <input type="text" disabled id="trip2-tent-for-rent">
+                <label>Araku cuisine experience ( Dinner)</label>
+                <input type="text" disabled id="trip2-Araku-cuisine-experience">
+                <label>Lunch ( veg / non veg ) Spl Bengali thali available</label>
+                <input type="text" disabled id="trip2Lunch">
+                <label>Katiki waterfalls</label>
+                <input type="text" disabled id="trip2Katiki-waterfalls">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- trip3 user data modal box -->
+
+    <div id="hiddenBoxTrip3" style="display: none;">
+        <div class="customerDataClass">
+            <h2 id="trip3Close" class="close">&times;</h2>
+            <div class="left">
+                <label>Name</label>
+                <input type=" text" disabled id="trip3-name">
+                <label>Email</label>
+                <input type="email" disabled id="trip3-email">
+                <label>Phone number</label>
+                <input type="tel" disabled id="trip3-phoneNumber">
+                <label>Check-in date</label>
+                <input type="date" disabled id="trip3-check-in">
+                <label>Check-out date</label>
+                <input type="date" disabled id="trip3-check-out">
+                <label>Adults</label>
+                <input type="text" disabled id="trip3-adult-count">
+                <label>Children</label>
+                <input type="text" disabled id="trip3-children-count">
+                <label>Infants</label>
+                <input type="text" disabled id="trip3-infants-count">
+                <label>Rooms</label>
+                <input type="text" disabled id="trip3-rooms-count">
+                <label>Rooms type</label>
+                <input type="text" disabled id="trip3-rooms-type">
+            </div>
+            <div class="right">
+                <label>cab type</label>
+                <input type="text" id="trip3-cab-type">
+                <label>Firecamp</label>
+                <input type="text" disabled id="trip3-firecamp">
+                <label>Dhimsa dance</label>
+                <input type="text" disabled id="trip3-dhimsa-dance">
+                <label>Tent for rent</label>
+                <input type="text" disabled id="trip3-tent-for-rent">
+                <label>Araku cuisine experience ( Dinner)</label>
+                <input type="text" disabled id="trip3-Araku-cuisine-experience">
+                <label>Lunch ( veg / non veg ) Spl Bengali thali available</label>
+                <input type="text" disabled id="trip3Lunch">
+                <label>Katiki waterfalls</label>
+                <input type="text" disabled id="trip3Katiki-waterfalls">
+                <label>Rent a ride</label>
+                <input type="text" disabled id="trip3RentARide">
+            </div>
+        </div>
+    </div>
+
+    <!-- trip4 user data modal box -->
+
+    <div id="hiddenBoxTrip4" style="display: none;">
+        <div class="customerDataClass">
+            <h2 id="trip4Close" class="close">&times;</h2>
+            <div class="left">
+                <label>Name</label>
+                <input type=" text" disabled id="trip4-name">
+                <label>Email</label>
+                <input type="email" disabled id="trip4-email">
+                <label>Phone number</label>
+                <input type="tel" disabled id="trip4-phoneNumber">
+                <label>Check-in date</label>
+                <input type="date" disabled id="trip4-check-in">
+                <label>Check-out date</label>
+                <input type="date" disabled id="trip4-check-out">
+                <label>Adults</label>
+                <input type="text" disabled id="trip4-adult-count">
+                <label>Children</label>
+                <input type="text" disabled id="trip4-children-count">
+                <label>Infants</label>
+                <input type="text" disabled id="trip4-infants-count">
+                <label>Rooms</label>
+                <input type="text" disabled id="trip4-rooms-count">
+                <label>Rooms type</label>
+                <input type="text" disabled id="trip4-rooms-type">
+            </div>
+            <div class="right">
+                <label>cab type</label>
+                <input type="text" id="trip4-cab-type">
+                <label>Firecamp</label>
+                <input type="text" disabled id="trip4-firecamp">
+                <label>Dhimsa dance</label>
+                <input type="text" disabled id="trip4-dhimsa-dance">
+                <label>Tent for rent</label>
+                <input type="text" disabled id="trip4-tent-for-rent">
+                <label>Araku cuisine experience ( Dinner)</label>
+                <input type="text" disabled id="trip4-Araku-cuisine-experience">
+                <label>Lunch ( veg / non veg ) Spl Bengali thali available</label>
+                <input type="text" disabled id="trip4Lunch">
+                <label>Katiki waterfalls</label>
+                <input type="text" disabled id="trip4Katiki-waterfalls">
+                <label>Rent a ride</label>
+                <input type="text" disabled id="trip4RentARide">
+                <label>Trecking</label>
+                <input type="text" disabled id="trip4Trecking">
+            </div>
+        </div>
+    </div>
+
+    <div id="messageBox" style="display: none;">
+        <div class="messageModalBox">
+            <h2 id="messageModalBoxClose" class="messageClose">&times;</h2>
+            <div class="content">
+                <h2>Message</h2>
+                <p id="message-ID-Data-Message">
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- display over 5 seconds -->
+    <div class="displayMsg" id="displayMessageBox">
+        <h4 id="displayMessage"></h4>
+    </div>
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBInXCVaHvXISAvP9JKlsAZpEMeN1IxTNk",
+            authDomain: "oyola-website.firebaseapp.com",
+            databaseURL: "https://oyola-website.firebaseio.com",
+            projectId: "oyola-website",
+            storageBucket: "oyola-website.appspot.com",
+            messagingSenderId: "593911427198",
+            appId: "1:593911427198:web:4c0b92e3a7586b44cda82f",
+            measurementId: "G-7D9106RR52"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // making auth and firestore references
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
+    <script src="./js/admin/bookingsData.js"></script>
+    <script src="./js/admin/trip2bookingsData.js"></script>
+    <script src="./js/admin/trip3bookingsData.js"></script>
+    <script src="./js/admin/trip4bookingsData.js"></script>
+    <script src="./js/admin/usersBlockData.js"></script>
+    <script src="./js/admin/messagesBlockData.js"></script>
+    <script src="./js/admin/admin-account-data.js"></script>
+    <script src="./js/admin/blocks.js"></script>
+
+    <!-- status messsage box -->
+    <script>
+        let displayMessageBox = document.getElementById("displayMessageBox");
+        let displayMessage = document.getElementById("displayMessage");
+
+        function displayMessageBoxFunction(text) {
+            displayMessage.innerHTML = text;
+            displayMessageBox.style.display = "block";
+            setTimeout(function () {
+                displayMessageBoxCloseFunction();
+            }, 1000 * 4);
+        }
+
+        function displayMessageBoxCloseFunction() {
+            displayMessageBox.style.display = "none";
+        }
+
+    </script>
+
+    <script>
+
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                accountData(user.uid);
+                trip1BookingsFunction();
+                trip2BookingsFunction();
+                trip3BookingsFunction();
+                trip4BookingsFunction();
+                usersRetrieveFunction();
+                messagesRetrieveFunction();
+
+                document.getElementById("navigationSection").style.display = "block";
+                document.getElementById("block").style.display = "block";
+                document.getElementById("admin-login-box").style.display = "none";
+            } else {
+                document.getElementById("navigationSection").style.display = "none";
+                document.getElementById("block").style.display = "none";
+                document.getElementById("admin-login-box").style.display = "block";
+            }
+        });
+
+        // log out
+
+        let logOut = document.querySelector('#admin-log-out');
+
+        logOut.addEventListener('click', () => {
+            auth.signOut();
+            displayMessageBoxFunction("You're logged out successfully");
+            location.reload();
+        });
+
+
+        // log in
+
+
+        let adminLogInForm = document.querySelector('#admin-log-in-form');
+        let adminLogInError = document.querySelector('#admin-log-in-error');
+
+        adminLogInForm.addEventListener('submit', (e) => {
+
+            adminLogInError.innerHTML = "";
+
+            // to restrict reloading on clicking submit button
+            e.preventDefault();
+
+            // getting user info
+            const email = adminLogInForm['admin-email'].value;
+            const password = adminLogInForm['admin-password'].value;
+
+            // logging in with email and password
+
+            auth.signInWithEmailAndPassword(email, password).then(cred => {
+                const userUid = cred.user.uid;
+                adminLogInForm.reset();
+
+                document.getElementById("navigationSection").style.display = "block";
+                document.getElementById("admin-login-box").style.display = "none";
+
+                displayMessageBoxFunction("You're logged in as " + email);
+            }).catch((error) => {
+                if (error.code == "auth/user-not-found") {
+                    adminLogInError.innerHTML = "Invalid email"
+                } else if (error.code = "auth/wrong-password") {
+                    adminLogInError.innerHTML = "Incorrect password"
+                }
+            });
+
+        })
+
+    </script>
+</body>
+
+</html>
